@@ -150,7 +150,7 @@ class EntryData(_namedtuple_compat):
     def resource_id(self) -> tuple[str, str]:
         return self.feed_url, self.id
 
-    _hash_exclude_ = frozenset({'feed_url', 'id', 'updated'})
+    _hash_exclude_ = frozenset({'feed_url', 'id'})
 
     @cached_property
     def hash(self) -> bytes:
